@@ -1,0 +1,202 @@
+<html>
+<head>
+    <title>Renaud Marchais - Tous travaux de bricolage, Ile d'Yeu</title>
+    <meta name="description"
+          content="Entreprise Travaux Bricolage Ravalement Peinture sur Ile d'Yeu par Renaud Marchais"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <style>
+        @font-face {
+            font-family: "encode-sans";
+            src: url("font/EncodeSans.ttf") format("truetype");
+        }
+
+        @keyframes moveDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-40%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @keyframes moveUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @keyframes moveLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(25%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0%);
+            }
+        }
+
+        body {
+            font-family: encode-sans, sans-serif;
+            margin: 0;
+            background-color: #b2d3dc;
+            overflow: hidden;
+        }
+
+        {# Left Side Animated Tools #}
+
+        aside {
+            float: left;
+            display: inline-block;
+            width: 30vw;
+            height: 80vh;
+            padding: 5vh 10vw;
+        }
+
+        #move-down, #move-up {
+            height: 40vh;
+        }
+
+        #move-down img, #move-up img {
+            display: inline-block;
+            float: left;
+        }
+
+        #move-down {
+            animation: 1s ease-in 0s moveDown;
+        }
+
+        #move-up {
+            animation: 1s ease-in 0s moveUp;
+        }
+
+        #move-down img {
+            transform: rotate(180deg);
+        }
+
+        #move-down img:first-child, #move-up img:last-child {
+            width: 42.5%;
+        }
+
+        #move-down img:last-child, #move-up img:first-child {
+            width: 57.5%;
+        }
+
+        {# Right Side Article #}
+
+        article {
+            display: inline-block;
+            float: left;
+            width: 28vw;
+            padding: 16vh 8vw;
+            opacity: 0;
+            animation: 1s ease-out .5s forwards moveLeft;
+        }
+
+        article h2 {
+            margin-left: 1em;
+            margin-block-end: 0;
+            font-size: 2em;
+        }
+
+        article h2:nth-child(2) {
+            margin-block-end: 2em;
+        }
+
+        article p {
+            margin-block-start: 0;
+            margin-block-end: 0.5em;
+            font-size: 1.2em;
+        }
+
+        {# Footer #}
+
+        footer {
+            background: linear-gradient(#b2d3dc, #688d92 20px);
+            font-size: 25px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            height: 110px;
+            padding-top: 30px;
+            opacity: 0;
+            animation: 1s ease-out 1s forwards moveUp;
+        }
+
+        footer p, footer a {
+            margin: auto;
+        }
+
+        #name, #email {
+            display: inline-block;
+        }
+
+        #name {
+            margin-right: 2vw;
+        }
+
+        #email {
+            margin-left: 2vw;
+        }
+
+        #phone {
+            margin-block-start: 5px;
+            margin-block-end: 5px;
+            display: block;
+        }
+
+        #email, #phone {
+            text-decoration: none;
+        }
+
+        #email:hover, #phone:hover {
+            color: #0e2988;
+            text-decoration: underline;
+        }
+
+        #copyright {
+            font-size: 15px;
+            color: #363636;
+        }
+    </style>
+</head>
+<body>
+<aside>
+    <div id="move-down">
+        <img src="tools.svg" alt="Outils de bricolage 1-haut">
+        <img src="tools2.svg" alt="Outils de bricolage 2-haut">
+    </div>
+    <div id="move-up">
+        <img src="tools2.svg" alt="Outils de bricolage 2-bas">
+        <img src="tools.svg" alt="Outils de bricolage 1-bas">
+    </div>
+</aside>
+<article>
+    <h2>Renaud M</h2>
+    <h2>Tous travaux de bricolage</h2>
+    <p>Nettoyage et Démoussage de Toitures, Murs, Terrasses</p>
+    <p>Ravalement de façades et peintures intérieures</p>
+    <p>Poses de terrasses bois et composites</p>
+    <p>Doublage bois et plaques de plâtre, parquets</p>
+    <p>Isolation des combles</p>
+    <p>Montage meubles, cuisine, aménagements divers (menuiserie)...</p>
+    <p>Pose luminaires, tringles rideaux, étagères, tableaux...</p>
+    <p>Serrurerie</p>
+</article>
+<footer>
+    <p id="name">MARCHAIS Renaud</p>
+    <a id="email" href="mailto:rmyeu85@gmail.com">rmyeu85@gmail.com</a>
+    <a id="phone" href="tel:+33663879424">06.63.87.94.24</a>
+    <p id="copyright">&copy; 2020 Renaud Marchais, SIRET : 402 812 812 000 20</p>
+</footer>
+</body>
+</html>
